@@ -15,4 +15,4 @@ An App made with Dart (Flutter). It includes:
 - Pull to refresh
 - Cards
 - Sliders
-- ...And much more 🙃
+- ...And much more 🙃# flutter_app
