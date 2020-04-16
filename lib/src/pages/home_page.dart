@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/providers/menu_provider.dart';
-import 'package:flutter_app/src/pages/alert_data.dart';
+// import 'package:flutter_app/src/pages/alert_data.dart';
 import 'package:flutter_app/utils/icono_string_util.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,7 +8,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Componentes'),
+        backgroundColor: Colors.black,
+        title: Text(
+          'Componentes',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20.0,
+          ),
+        ),
       ),
       body: _lista(),
     );
@@ -20,8 +27,6 @@ class HomePage extends StatelessWidget {
       future: menuProvider.cargarData(),
       initialData: [],
       builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
-        print('builder');
-        print(snapshot.data);
         return ListView(
           children: _listaItems(snapshot.data, context),
         );
@@ -37,10 +42,11 @@ class HomePage extends StatelessWidget {
         leading: getIcon(opt['icon']),
         trailing: Icon(Icons.keyboard_arrow_right, color: Colors.black38),
         onTap: () {
-          final route = MaterialPageRoute(builder: (context) {
-            return AlertPage();
-          });
-          Navigator.push(context, route);
+          Navigator.pushNamed(context, opt['ruta']);
+          // final route = MaterialPageRoute(builder: (context) {
+          //   return AlertPage();
+          // });
+          // Navigator.push(context, route);
         },
       );
       opciones..add(widgetTemp)..add(Divider());

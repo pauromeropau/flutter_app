@@ -7,6 +7,15 @@ class AlertPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Alert page'),
       ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () => _mostrarAlerta(context),
+          child: Text('Mostrar alerta'),
+          color: Colors.blue,
+          textColor: Colors.white,
+          shape: StadiumBorder(),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.exit_to_app),
         onPressed: () {
@@ -14,5 +23,35 @@ class AlertPage extends StatelessWidget {
         },
       ),
     );
+  }
+
+  void _mostrarAlerta(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(7.0)),
+            title: Text('Título'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text('Este es el conteniido de la caja de la alerta'),
+                FlutterLogo(size: 50.0),
+              ],
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Cancelar'),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              FlatButton(
+                child: Text('Aceptar'),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+            ],
+          );
+        });
   }
 }
