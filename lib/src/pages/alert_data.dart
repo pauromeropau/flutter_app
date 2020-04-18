@@ -4,7 +4,9 @@ class AlertPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Alert page'),
       ),
       body: Center(

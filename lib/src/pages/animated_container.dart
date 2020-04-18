@@ -19,15 +19,17 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _backgroundColor,
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.play_arrow),
-        onPressed: _cambiarForma,
-        backgroundColor: _backgroundColor,
-        elevation: 0.0,
+      floatingActionButton: Container(
+        child: FloatingActionButton(
+          child: Icon(Icons.shuffle,
+              size: 40, color: Color.fromRGBO(255, 255, 255, 0.5)),
+          onPressed: _cambiarForma,
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+        ),
       ),
       appBar: AppBar(
-        backgroundColor: _backgroundColor,
-        title: Text('Animated container'),
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
       body: Center(

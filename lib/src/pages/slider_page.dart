@@ -11,7 +11,9 @@ class _SliderPageState extends State<SliderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Slider'),
       ),
       body: Container(
@@ -29,9 +31,8 @@ class _SliderPageState extends State<SliderPage> {
 
   Widget _crearSlider() {
     return Slider(
-      activeColor: Colors.indigoAccent,
+      activeColor: Colors.white,
       label: 'Tamaño de la imagen',
-      divisions: 20,
       value: _valorSlider,
       min: 10.0,
       max: 400.0,
@@ -45,7 +46,10 @@ class _SliderPageState extends State<SliderPage> {
 
   Widget _checkBox() {
     return CheckboxListTile(
-      title: Text('Bloquear slider'),
+      title: Text(
+        'Bloquear slider',
+        style: TextStyle(color: Colors.white),
+      ),
       value: _bloquearCheck,
       onChanged: (valor) {
         setState(() {
@@ -58,15 +62,17 @@ class _SliderPageState extends State<SliderPage> {
   Widget _crearImagen() {
     return Image(
       image: NetworkImage(
-          'https://images.unsplash.com/photo-1489340469066-8c79cdd36ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80'),
-      width: _valorSlider,
-      fit: BoxFit.contain,
+          'https://images.unsplash.com/photo-1496989981497-27d69cdad83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2841&q=80'),
+      width: _valorSlider + 100,
     );
   }
 
   Widget _crearSwitch() {
     return SwitchListTile(
-      title: Text('Bloquear slider'),
+      title: Text(
+        'Bloquear slider',
+        style: TextStyle(color: Colors.white),
+      ),
       value: _bloquearCheck,
       onChanged: (valor) {
         setState(() {

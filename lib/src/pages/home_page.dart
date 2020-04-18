@@ -7,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text(
@@ -38,9 +39,12 @@ class HomePage extends StatelessWidget {
     final List<Widget> opciones = [];
     data.forEach((opt) {
       final widgetTemp = ListTile(
-        title: Text(opt['texto']),
+        title: Text(
+          opt['texto'],
+          style: TextStyle(color: Colors.white),
+        ),
         leading: getIcon(opt['icon']),
-        trailing: Icon(Icons.keyboard_arrow_right, color: Colors.black38),
+        trailing: Icon(Icons.keyboard_arrow_right, color: Colors.white),
         onTap: () {
           Navigator.pushNamed(context, opt['ruta']);
           // final route = MaterialPageRoute(builder: (context) {

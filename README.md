@@ -1,5 +1,5 @@
 ### flutterapp
-An App made with Dart (Flutter). It includes: 
+An App made with Dart (Flutter) that includes (randomnly): 
 - Listviews
 - ListTiles
 - Lists and map
@@ -11,8 +11,8 @@ An App made with Dart (Flutter). It includes:
 - Images
 - Avatars
 - Loadings
-- InfiniteScroll
+- Infinite Scroll
 - Pull to refresh
 - Cards
 - Sliders
-- ...And much more 🙃# flutter_app
+- ...And much more 🙃

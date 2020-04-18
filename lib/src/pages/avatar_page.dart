@@ -4,24 +4,26 @@ class AvatarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Avatar page'),
         actions: <Widget>[
           Container(
-            padding: EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(10.0),
             child: CircleAvatar(
-              radius: 23.0,
+              radius: 19.0,
               backgroundImage: NetworkImage(
                   'https://avatars1.githubusercontent.com/u/52962079?s=460&u=21ee27353473cb1fcdabd92633fa4b3833a6505e&v=4'),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(right: 10.0),
-            child: CircleAvatar(
-              child: Text('P'),
-              backgroundColor: Colors.black38,
-            ),
-          ),
+          // Container(
+          //   margin: EdgeInsets.only(right: 10.0),
+          //   child: CircleAvatar(
+          //     child: Text('P'),
+          //     backgroundColor: Colors.black38,
+          //   ),
+          // ),
         ],
       ),
       body: Center(

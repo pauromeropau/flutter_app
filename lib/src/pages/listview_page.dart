@@ -37,7 +37,9 @@ class _ListaPageState extends State<ListaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: Text('Listas'),
         ),
         body: Stack(

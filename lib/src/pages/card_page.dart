@@ -4,7 +4,9 @@ class CardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Cards'),
       ),
       body: ListView(
@@ -15,23 +17,23 @@ class CardPage extends StatelessWidget {
             height: 30.0,
           ),
           _cardTipo2(),
-           SizedBox(
+          SizedBox(
             height: 30.0,
           ),
-           _cardTipo1(),
+          _cardTipo1(),
           SizedBox(
             height: 30.0,
           ),
           _cardTipo2(),
-           SizedBox(
+          SizedBox(
             height: 30.0,
           ),
-           _cardTipo1(),
+          _cardTipo1(),
           SizedBox(
             height: 30.0,
           ),
           _cardTipo2(),
-           SizedBox(
+          SizedBox(
             height: 30.0,
           ),
         ],
@@ -41,24 +43,37 @@ class CardPage extends StatelessWidget {
 
   Widget _cardTipo1() {
     return Card(
+      color: Colors.black38,
       elevation: 1.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Column(
         children: <Widget>[
           ListTile(
-            leading: Icon(Icons.photo_album, color: Colors.blue),
-            title: Text('Soy el título de ésta tarjeta'),
-            subtitle: Text('Soy el subtítulo de ésta tarjeta'),
+            leading: Icon(Icons.photo_album, color: Colors.white10),
+            title: Text(
+              'Soy el título de ésta tarjeta',
+              style: TextStyle(color: Colors.white),
+            ),
+            subtitle: Text(
+              'Soy el subtítulo de ésta tarjeta',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               FlatButton(
-                child: Text('Cancelar'),
+                child: Text(
+                  'Cancelar',
+                  style: TextStyle(color: Colors.red),
+                ),
                 onPressed: () {},
               ),
               FlatButton(
-                child: Text('Guardar'),
+                child: Text(
+                  'Guardar',
+                  style: TextStyle(color: Colors.blue),
+                ),
                 onPressed: () {},
               )
             ],
@@ -86,14 +101,14 @@ class CardPage extends StatelessWidget {
           // ),
           Container(
             padding: EdgeInsets.all(15.0),
-            child: Text('Título de imagen'),
+            child: Text('Título de imagen', style: TextStyle(color: Colors.white),),
           ),
         ],
       ),
     );
     return Container(
       decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.black,
           borderRadius: BorderRadius.circular(30.0),
           boxShadow: <BoxShadow>[
             BoxShadow(
