@@ -1,5 +1,5 @@
 ### flutterapp
-An App made with Dart (Flutter) that includes: 
+An App made with Flutter that includes some random stuff like: 
 - Listviews
 - ListTiles
 - Lists and map
