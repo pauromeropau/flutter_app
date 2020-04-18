@@ -1,5 +1,5 @@
 ### flutterapp
-An App made with Dart (Flutter) that includes (randomnly): 
+An App made with Dart (Flutter) that includes: 
 - Listviews
 - ListTiles
 - Lists and map
@@ -15,4 +15,10 @@ An App made with Dart (Flutter) that includes (randomnly):
 - Pull to refresh
 - Cards
 - Sliders
-- ...And much more 🙃
+- ...And 👇🏻
+
+
+
+![](https://media.giphy.com/media/U3PcJWAKlUD7tx7WOO/giphy.gif)
+
+
